@@ -7,16 +7,12 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "tw:sort": "rustywind --write src"
+    "astro": "astro"
   },
   "dependencies": {
     "@astrojs/tailwind": "^4.0.0",
     "astro": "^2.8.2",
     "daisyui": "^3.2.1",
     "tailwindcss": "^3.3.3"
-  },
-  "devDependencies": {
-    "rustywind": "^0.16.0"
   }
 }
