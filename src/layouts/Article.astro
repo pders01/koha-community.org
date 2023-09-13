@@ -1,0 +1,25 @@
+---
+import Layout from "./Layout.astro";
+
+const { frontmatter } = Astro.props;
+const { title, tags } = frontmatter;
+---
+
+<Layout title={title}>
+    <main>
+        <section class="min-h-screen flex flex-col">
+            <ul class="self-center my-4">
+                {
+                    tags?.map((tag: string) => (
+                        <li class="inline mx-1">
+                            <span class="badge badge-neutral">#{tag}</span>
+                        </li>
+                    ))
+                }
+            </ul>
+            <article class="prose self-center my-8 px-4">
+                <slot />
+            </article>
+        </section>
+    </main>
+</Layout>

@@ -1,0 +1,22 @@
+---
+import Layout from "./Layout.astro";
+
+const { frontmatter } = Astro.props;
+const { title, tags, image } = frontmatter;
+---
+
+<Layout title={title}>
+    <main>
+        <h1>{title}</h1>
+        <ul>
+            {
+                tags.map((tag: string) => (
+                    <li>
+                        <span class="badge badge-neutral">#{tag}</span>
+                    </li>
+                ))
+            }
+        </ul>
+        <slot />
+    </main>
+</Layout>

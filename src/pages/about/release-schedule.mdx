@@ -1,0 +1,53 @@
+---
+layout: "../../layouts/Article.astro"
+title: "Release Schedule"
+tags: ["about"]
+---
+
+# Release Schedule
+
+Koha releases follow a regular, calendar based, pattern with monthly maintenance releases and bi-annual feature releases.
+
+## What is the difference between ‘feature’ and ‘maintenance’ releases?
+
+- A feature release is a release of Koha which includes new features and enhancements. These feature stable versions of Koha are then maintained for an average of 18 months.
+
+- A maintenance release is a release of Koha which only includes fixes to bugs and security issues. These are applied to each of the feature stable versions of Koha which are still within their maintenance period.
+
+## Which releases are supported, and for how long?
+
+- The Koha community generally supports **two** to **three** major versions for bug and security fixes.
+
+- The supported versions are generally supported for an average of 18 months – or as long as someone has volunteered to look after a given version. 
+
+## When are these releases made?
+
+- Feature releases are made each May and November on or around the 22nd of the month.
+
+- Maintenance releases are made each month on or around the 22nd of the month.
+
+More information about the Koha release process and version numbers can be found on the wiki
+
+## So, how does new code get into Koha?
+
+The Koha community uses Bugzilla to track bugs and enhancements and every piece of code follows a standard path to production.
+
+1. A bug/enhancement is reported on Bugzilla by a ‘bug reporter’
+
+2. A patch is submitted to the corresponding bug in Bugzilla by a ‘patch author’ 
+
+3. The patch is then tested and, if testing passes, it is marked as ‘Signed Off’ by a ‘Patch Tester’
+
+4. The patch is then quality assured by a member of the ‘QA Team’ and if it passes it is marked as ‘Passed QA’
+
+5. The patch is then tested and, if appropriate, pushed into the development code-base by the ‘Release Manager’ and the bug is marked as ‘Pushed to master’
+
+6. If the patch is a bug-fix, and it applies to current maintenance releases, then it is back-ported by the ‘Release Maintainers’ to their respective development code-bases and the bug is marked as ‘Pushed to X’
+
+7. On, or around, the 15th of the month the ‘Release Maintainers’ will announce a ‘String Freeze’ and translators will have a week to translate any strings that changed as a result of the patch.
+
+8. On, or around, the 22nd of the month the ‘Release Maintainers’ will build and tag a release and publish it. 
+
+9. Upon release, the ‘Release Maintainer’ will mark the bug as ‘RESOLVED FIXED’
+
+10. New features and enhancements continue to collect on the master development code-base until the beginning of a ‘feature release’ month, at which point the ‘Release Manager’ will announce final testing and a release schedule for the new major version of Koha.

@@ -1,4 +1,4 @@
-<div class="navbar fixed top-0 bg-base-100">
+<div class="navbar sticky z-50 top-0 bg-base-100">
     <div class="navbar-start">
         <div class="dropdown">
             <label tabindex="0" class="btn btn-ghost lg:hidden">
@@ -17,58 +17,116 @@
             </label>
             <ul
                 tabindex="0"
-                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box"
             >
-                <li><a>Home</a></li>
-                <li><a>News</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/news">News</a></li>
                 <li tabindex="0">
                     <details>
                         <summary>About</summary>
                         <ul class="p-2">
+                            <li><a href="/about">About</a></li>
                             <li><a>History</a></li>
-                            <li><a>Project Organization</a></li>
+                            <li>
+                                <a href="/about/project-organization"
+                                    >Project Organization</a
+                                >
+                            </li>
                             <ul class="p-2">
                                 <li>
                                     <a
+                                        href="/about/project-organization/horowhenua-library-trust-koha-committee-rules"
                                         >Horowhenua Library Trust Koha Committee
                                         Rules</a
                                     >
                                 </li>
                             </ul>
-                            <li><a>Policy</a></li>
+                            <li><a href="/about/policy">Policy</a></li>
                             <ul class="p-2">
-                                <li><a>Trademark Usage Policy</a></li>
-                                <li><a>Comments Policy</a></li>
-                                <li><a>Koha Community Code of Conduct</a></li>
+                                <li>
+                                    <a
+                                        href="/about/policy/trademark-usage-policy"
+                                        >Trademark Usage Policy</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="/about/policy/comments-policy"
+                                        >Comments Policy</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="/about/policy/koha-community-code-of-conduct"
+                                        >Koha Community Code of Conduct</a
+                                    >
+                                </li>
                             </ul>
-                            <li><a>Release Schedule</a></li>
-                            <li><a>Worldwide</a></li>
+                            <li>
+                                <a href="/about/release-schedule"
+                                    >Release Schedule</a
+                                >
+                            </li>
+                            <li><a href="/about/worldwide">Worldwide</a></li>
                         </ul>
                     </details>
                 </li>
-                <li><a>Calendar</a></li>
-                <li><a>Demo</a></li>
+                <li><a href="/calendar">Calendar</a></li>
+                <li><a href="/demo">Demo</a></li>
                 <li tabindex="0">
                     <details>
                         <summary>Documentation</summary>
                         <ul class="p-2">
-                            <li><a>Documentation - Unsupported Version</a></li>
-                            <li><a>Test Bibliography</a></li>
-                            <li><a>Other Docs</a></li>
-                            <li><a>Koha Bibliography</a></li>
+                            <li><a href="/documentation">Documentation</a></li>
+                            <li>
+                                <a href="/documentation/unsupported-versions"
+                                    >Documentation - Unsupported Version</a
+                                >
+                            </li>
+                            <li>
+                                <a href="/documentation/test-bibliography"
+                                    >Test Bibliography</a
+                                >
+                            </li>
+                            <li>
+                                <a href="/documentation/other-docs"
+                                    >Other Docs</a
+                                >
+                            </li>
+                            <li>
+                                <a href="/documentation/koha-bibliography"
+                                    >Koha Bibliography</a
+                                >
+                            </li>
                         </ul>
                     </details>
                 </li>
-                <li><a>Download Koha</a></li>
+                <li><a href="/download-koha">Download Koha</a></li>
                 <li tabindex="0">
                     <details>
                         <summary>Get involved</summary>
                         <ul class="p-2">
-                            <li><a>Chat</a></li>
-                            <li><a>Enhancing Koha</a></li>
-                            <li><a>For Developers</a></li>
-                            <li><a>For Librarians</a></li>
-                            <li><a>For Library Users</a></li>
+                            <li><a href="/get-involved">Get involved</a></li>
+                            <li><a href="/get-involved/chat">Chat</a></li>
+                            <li>
+                                <a href="/get-involved/enhancing-koha"
+                                    >Enhancing Koha</a
+                                >
+                            </li>
+                            <li>
+                                <a href="/get-involved/for-developers"
+                                    >For Developers</a
+                                >
+                            </li>
+                            <li>
+                                <a href="/get-involved/for-librarians"
+                                    >For Librarians</a
+                                >
+                            </li>
+                            <li>
+                                <a href="/get-involved/for-library-users"
+                                    >For Library Users</a
+                                >
+                            </li>
                         </ul>
                     </details>
                 </li>
@@ -76,16 +134,21 @@
                     <details>
                         <summary>KohaCon</summary>
                         <ul class="p-2">
-                            <li><a>KohaCon23</a></li>
-                            <li><a>KohaCon22</a></li>
-                            <li><a>KohaCon21</a></li>
-                            <li><a>KohaCon20</a></li>
-                            <li><a>KohaCon19</a></li>
-                            <li><a>KohaCon18</a></li>
-                            <li><a>KohaCon17</a></li>
-                            <li><a>KohaCon16</a></li>
-                            <li><a>KohaCon15</a></li>
-                            <li><a>KohaCon14</a></li>
+                            <li><a href="/kohacon">KohaCon</a></li>
+                            <li><a href="/kohacon/kohacon23">KohaCon23</a></li>
+                            <li><a href="/kohacon/kohacon22">KohaCon22</a></li>
+                            <li><a href="/kohacon/kohacon21">KohaCon21</a></li>
+                            <li><a href="/kohacon/kohacon20">KohaCon20</a></li>
+                            <li><a href="/kohacon/kohacon19">KohaCon19</a></li>
+                            <li><a href="/kohacon/kohacon18">KohaCon18</a></li>
+                            <li><a href="/kohacon/kohacon17">KohaCon17</a></li>
+                            <li><a href="/kohacon/kohacon16">KohaCon16</a></li>
+                            <li><a href="/kohacon/kohacon15">KohaCon15</a></li>
+                            <li><a href="/kohacon/kohacon14">KohaCon14</a></li>
+                            <ul class="p-2">
+                                <li><a href="/kohacon/kohacon14/schedule">Schedule</a></li>
+                                <li><a href="/kohacon/kohacon14/venue">Venue</a></li>
+                            </ul>
                         </ul>
                     </details>
                 </li>
@@ -93,20 +156,41 @@
                     <details>
                         <summary>Support</summary>
                         <ul class="p-2">
-                            <li><a>Community Support</a></li>
-                            <li><a>Koha Mailing Lists</a></li>
+                            <li><a href="/support">Support</a></li>
+                            <li>
+                                <a href="/support/community-support"
+                                    >Community Support</a
+                                >
+                            </li>
+                            <li>
+                                <a href="/support/koha-mailing-lists"
+                                    >Koha Mailing Lists</a
+                                >
+                            </li>
                             <ul class="p-2">
                                 <li>
-                                    <a>Web Forums</a>
+                                    <a
+                                        href="/support/koha-mailing-lists/web-forums"
+                                        >Web Forums</a
+                                    >
                                 </li>
                             </ul>
-                            <li><a>Paid Support</a></li>
+                            <li>
+                                <a href="/support/paid-support">Paid Support</a>
+                            </li>
                             <ul class="p-2">
                                 <li>
-                                    <a>How to get Listed</a>
+                                    <a
+                                        href="/support/paid-support/how-to-get-listed"
+                                        >How to get Listed</a
+                                    >
                                 </li>
                             </ul>
-                            <li><a>Report a Problem</a></li>
+                            <li>
+                                <a href="/support/report-a-problem"
+                                    >Report a Problem</a
+                                >
+                            </li>
                         </ul>
                     </details>
                 </li>
@@ -114,6 +198,7 @@
         </div>
         <a class="normal-case text-xl mx-2" href="/"
             ><img
+                id="brand"
                 src="/svg/logo_bw.svg"
                 class="mr-3 h-12 invert"
                 alt="Koha Logo"
@@ -122,56 +207,111 @@
     </div>
     <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1">
-            <li><a>Home</a></li>
-            <li><a>News</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/news">News</a></li>
             <li tabindex="0">
                 <details>
                     <summary>About</summary>
                     <ul class="p-2">
+                        <li><a href="/about">About</a></li>
                         <li><a>History</a></li>
-                        <li><a>Project Organization</a></li>
+                        <li>
+                            <a href="/about/project-organization"
+                                >Project Organization</a
+                            >
+                        </li>
                         <ul class="p-2">
                             <li>
                                 <a
+                                    href="/about/project-organization/horowhenua-library-trust-koha-committee-rules"
                                     >Horowhenua Library Trust Koha Committee
                                     Rules</a
                                 >
                             </li>
                         </ul>
-                        <li><a>Policy</a></li>
+                        <li><a href="/about/policy">Policy</a></li>
                         <ul class="p-2">
-                            <li><a>Trademark Usage Policy</a></li>
-                            <li><a>Comments Policy</a></li>
-                            <li><a>Koha Community Code of Conduct</a></li>
+                            <li>
+                                <a href="/about/policy/trademark-usage-policy"
+                                    >Trademark Usage Policy</a
+                                >
+                            </li>
+                            <li>
+                                <a href="/about/policy/comments-policy"
+                                    >Comments Policy</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="/about/policy/koha-community-code-of-conduct"
+                                    >Koha Community Code of Conduct</a
+                                >
+                            </li>
                         </ul>
-                        <li><a>Release Schedule</a></li>
-                        <li><a>Worldwide</a></li>
+                        <li>
+                            <a href="/about/release-schedule"
+                                >Release Schedule</a
+                            >
+                        </li>
+                        <li><a href="/about/worldwide">Worldwide</a></li>
                     </ul>
                 </details>
             </li>
-            <li><a>Calendar</a></li>
-            <li><a>Demo</a></li>
+            <li><a href="/calendar">Calendar</a></li>
+            <li><a href="/demo">Demo</a></li>
             <li tabindex="0">
                 <details>
                     <summary>Documentation</summary>
                     <ul class="p-2">
-                        <li><a>Documentation - Unsupported Version</a></li>
-                        <li><a>Test Bibliography</a></li>
-                        <li><a>Other Docs</a></li>
-                        <li><a>Koha Bibliography</a></li>
+                        <li><a href="/documentation">Documentation</a></li>
+                        <li>
+                            <a href="/documentation/unsupported-versions"
+                                >Documentation - Unsupported Version</a
+                            >
+                        </li>
+                        <li>
+                            <a href="/documentation/test-bibliography"
+                                >Test Bibliography</a
+                            >
+                        </li>
+                        <li>
+                            <a href="/documentation/other-docs">Other Docs</a>
+                        </li>
+                        <li>
+                            <a href="/documentation/koha-bibliography"
+                                >Koha Bibliography</a
+                            >
+                        </li>
                     </ul>
                 </details>
             </li>
-            <li><a>Download Koha</a></li>
+            <li><a href="/download-koha">Download Koha</a></li>
             <li tabindex="0">
                 <details>
                     <summary>Get involved</summary>
                     <ul class="p-2">
-                        <li><a>Chat</a></li>
-                        <li><a>Enhancing Koha</a></li>
-                        <li><a>For Developers</a></li>
-                        <li><a>For Librarians</a></li>
-                        <li><a>For Library Users</a></li>
+                        <li><a href="/get-involved">Get involved</a></li>
+                        <li><a href="/get-involved/chat">Chat</a></li>
+                        <li>
+                            <a href="/get-involved/enhancing-koha"
+                                >Enhancing Koha</a
+                            >
+                        </li>
+                        <li>
+                            <a href="/get-involved/for-developers"
+                                >For Developers</a
+                            >
+                        </li>
+                        <li>
+                            <a href="/get-involved/for-librarians"
+                                >For Librarians</a
+                            >
+                        </li>
+                        <li>
+                            <a href="/get-involved/for-library-users"
+                                >For Library Users</a
+                            >
+                        </li>
                     </ul>
                 </details>
             </li>
@@ -179,16 +319,21 @@
                 <details>
                     <summary>KohaCon</summary>
                     <ul class="p-2">
-                        <li><a>KohaCon23</a></li>
-                        <li><a>KohaCon22</a></li>
-                        <li><a>KohaCon21</a></li>
-                        <li><a>KohaCon20</a></li>
-                        <li><a>KohaCon19</a></li>
-                        <li><a>KohaCon18</a></li>
-                        <li><a>KohaCon17</a></li>
-                        <li><a>KohaCon16</a></li>
-                        <li><a>KohaCon15</a></li>
-                        <li><a>KohaCon14</a></li>
+                        <li><a href="/kohacon">KohaCon</a></li>
+                        <li><a href="/kohacon/kohacon23">KohaCon23</a></li>
+                        <li><a href="/kohacon/kohacon22">KohaCon22</a></li>
+                        <li><a href="/kohacon/kohacon21">KohaCon21</a></li>
+                        <li><a href="/kohacon/kohacon20">KohaCon20</a></li>
+                        <li><a href="/kohacon/kohacon19">KohaCon19</a></li>
+                        <li><a href="/kohacon/kohacon18">KohaCon18</a></li>
+                        <li><a href="/kohacon/kohacon17">KohaCon17</a></li>
+                        <li><a href="/kohacon/kohacon16">KohaCon16</a></li>
+                        <li><a href="/kohacon/kohacon15">KohaCon15</a></li>
+                        <li><a href="/kohacon/kohacon14">KohaCon14</a></li>
+                        <ul class="p-2">
+                            <li><a href="/kohacon/kohacon14/schedule">Schedule</a></li>
+                            <li><a href="/kohacon/kohacon14/venue">Venue</a></li>
+                        </ul>
                     </ul>
                 </details>
             </li>
@@ -196,23 +341,81 @@
                 <details>
                     <summary>Support</summary>
                     <ul class="p-2">
-                        <li><a>Community Support</a></li>
-                        <li><a>Koha Mailing Lists</a></li>
+                        <li><a href="/support">Support</a></li>
+                        <li>
+                            <a href="/support/community-support"
+                                >Community Support</a
+                            >
+                        </li>
+                        <li>
+                            <a href="/support/koha-mailing-lists"
+                                >Koha Mailing Lists</a
+                            >
+                        </li>
                         <ul class="p-2">
                             <li>
-                                <a>Web Forums</a>
+                                <a href="/support/koha-mailing-lists/web-forums"
+                                    >Web Forums</a
+                                >
                             </li>
                         </ul>
-                        <li><a>Paid Support</a></li>
+                        <li>
+                            <a href="/support/paid-support">Paid Support</a>
+                        </li>
                         <ul class="p-2">
                             <li>
-                                <a>How to get Listed</a>
+                                <a
+                                    href="/support/paid-support/how-to-get-listed"
+                                    >How to get Listed</a
+                                >
                             </li>
                         </ul>
-                        <li><a>Report a Problem</a></li>
+                        <li>
+                            <a href="/support/report-a-problem"
+                                >Report a Problem</a
+                            >
+                        </li>
                     </ul>
                 </details>
             </li>
         </ul>
+        <li class="flex gap-2 justify-center items-center">
+            <span>🌞</span>
+            <input
+                id="theme-toggle"
+                data-toggle-theme="dark,light"
+                data-act-class="ACTIVECLASS"
+                type="checkbox"
+                class="toggle toggle-sm"
+            />
+            <span>🌚</span>
+        </li>
     </div>
 </div>
+
+<script>
+    const theme = localStorage.getItem("theme");
+    const themeToggle = document.getElementById("theme-toggle");
+    if (themeToggle instanceof HTMLInputElement) {
+        themeToggle.checked = theme === "dark";
+        themeToggle?.addEventListener("change", handleThemeToggle);
+    }
+
+    const brand = document.getElementById("brand");
+    if (theme === "light" && brand instanceof HTMLImageElement) {
+        brand.classList.remove("invert");
+    }
+
+    function handleThemeToggle() {
+        const theme = localStorage.getItem("theme");
+        if (!(brand instanceof HTMLImageElement)) {
+            return;
+        }
+
+        if (theme === "dark") {
+            brand.classList.add("invert");
+        } else {
+            brand.classList.remove("invert");
+        }
+    }
+</script>

@@ -1,0 +1,19 @@
+---
+export interface Props {
+    action: string;
+    method: string;
+}
+
+const { action, method } = Astro.props;
+---
+
+<form class="join" action={action} method={method}>
+    <input
+        class="input input-bordered join-item"
+        placeholder="Words that desribe the Bug"
+        type="text"
+        name="quicksearch"
+        required
+    />
+    <input class="btn join-item" type="submit" value="Search" id="find_top" />
+</form>

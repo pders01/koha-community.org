@@ -1,0 +1,35 @@
+---
+layout: "../../layouts/Article.astro"
+title: "Report a Problem"
+tags: ["support"]
+---
+
+import BugzillaSearch from "../../components/BugzillaSearch.astro";
+
+# Report a Problem
+
+## Did you find a problem with Koha?
+
+**If it is a security bug, [report it here](http://bugs.koha-community.org/bugzilla3/enter_bug.cgi?product=Koha%20security)**
+
+Otherwise:
+
+Search here to see if someone else has reported the problem you’re having:
+
+<BugzillaSearch action="https://bugs.koha-community.org/bugzilla3/buglist.cgi" method="get" />
+
+**Missing the nerd knobs?** Try the [advanced bug search](https://bugs.koha-community.org/bugzilla3/query.cgi).
+
+**[View all of the current critical and blocker bugs](https://bugs.koha-community.org/bugzilla3/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&long_desc_type=substring&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&deadlinefrom=&deadlineto=&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&bug_severity=blocker&bug_severity=critical&emailassigned_to1=1&emailtype1=substring&email1=&emailassigned_to2=1&emailreporter2=1&emailcc2=1&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=)**
+
+**[View all currently open Koha bugs](https://bugs.koha-community.org/bugzilla3/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&product=Koha&long_desc_type=substring&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&bug_severity=blocker&bug_severity=critical&bug_severity=major&bug_severity=normal&bug_severity=minor&bug_severity=trivial&emailassigned_to1=1&emailtype1=substring&email1=&emailassigned_to2=1&emailreporter2=1&emailcc2=1&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=)**
+
+**[See more about what ideas we are kicking around (Enhancements to Koha)](https://koha-community.org/about/enhancing-koha/)**
+
+**Hey, are those bugs getting fixed?** [Why, funny you should ask! Yes, indeed they are!](https://bugs.koha-community.org/bugzilla3/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&long_desc_type=substring&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&bug_status=RESOLVED&bug_status=CLOSED&resolution=FIXED&resolution=INVALID&resolution=WORKSFORME&emailassigned_to1=1&emailtype1=substring&email1=&emailassigned_to2=1&emailreporter2=1&emailcc2=1&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=2009-01-01&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Bug+Number&field0-0-0=noop&type0-0-0=noop&value0-0-0=)
+
+**You didn’t find your issue listed?** [Make yourself an account](https://bugs.koha-community.org/bugzilla3/createaccount.cgi), and then [create a new bug report!](http://bugs.koha-community.org/bugzilla3/enter_bug.cgi)
+
+**If you’re not sure about what to type in all of those boxes,** you can check out our [Bug Reporting Guidelines.](https://wiki.koha-community.org/wiki/Bug_Reporting_Guidelines)
+
+If you find yourself here a lot, you can [install a Koha Bugzilla Quicksearch function](javascript:window.external.AddSearchProvider('https://bugs.koha-community.org/bugzilla3/search_plugin.cgi')) in Firefox or Internet Explorer 7+, and search our bug database directly from your browser quick search bar. **Note:** If you had previously installed the browser search from our old Bugzilla at [http://bugs.koha.org](http://bugs.koha.org), [you will need to remove it](http://www.ehow.com/how_5666777_remove-engine-firefox_s-search-bar.html) before you add the new one.
