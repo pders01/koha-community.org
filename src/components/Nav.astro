@@ -146,8 +146,14 @@
                             <li><a href="/kohacon/kohacon15">KohaCon15</a></li>
                             <li><a href="/kohacon/kohacon14">KohaCon14</a></li>
                             <ul class="p-2">
-                                <li><a href="/kohacon/kohacon14/schedule">Schedule</a></li>
-                                <li><a href="/kohacon/kohacon14/venue">Venue</a></li>
+                                <li>
+                                    <a href="/kohacon/kohacon14/schedule"
+                                        >Schedule</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="/kohacon/kohacon14/venue">Venue</a>
+                                </li>
                             </ul>
                         </ul>
                     </details>
@@ -331,8 +337,14 @@
                         <li><a href="/kohacon/kohacon15">KohaCon15</a></li>
                         <li><a href="/kohacon/kohacon14">KohaCon14</a></li>
                         <ul class="p-2">
-                            <li><a href="/kohacon/kohacon14/schedule">Schedule</a></li>
-                            <li><a href="/kohacon/kohacon14/venue">Venue</a></li>
+                            <li>
+                                <a href="/kohacon/kohacon14/schedule"
+                                    >Schedule</a
+                                >
+                            </li>
+                            <li>
+                                <a href="/kohacon/kohacon14/venue">Venue</a>
+                            </li>
                         </ul>
                     </ul>
                 </details>
@@ -404,6 +416,25 @@
     const brand = document.getElementById("brand");
     if (theme === "light" && brand instanceof HTMLImageElement) {
         brand.classList.remove("invert");
+    }
+
+    const dropdowns = document.querySelectorAll("details");
+    dropdowns.forEach((dropdown) => {
+        if (!(dropdown instanceof HTMLDetailsElement)) {
+            return;
+        }
+
+        dropdown.addEventListener("click", handleDropdownClick);
+    });
+
+    function handleDropdownClick(e: Event) {
+        const target = e.target as HTMLElement;
+        const details = target.closest("details");
+        Array.from(dropdowns)
+            .filter((dropdown) => dropdown !== details)
+            .forEach((dropdown) => {
+                dropdown.removeAttribute("open");
+            });
     }
 
     function handleThemeToggle() {
