@@ -1,3 +1,7 @@
+---
+import Search from "./Search.astro";
+---
+
 <div class="navbar sticky z-50 top-0 bg-base-100">
     <div class="navbar-start">
         <div class="dropdown">
@@ -402,6 +406,9 @@
             />
             <span>🌚</span>
         </li>
+        <li class="flex gap-2 justify-center items-center mx-2">
+            <Search />
+        </li>
     </div>
 </div>
 
@@ -427,6 +434,11 @@
         dropdown.addEventListener("click", handleDropdownClick);
     });
 
+    const searchButton = document.querySelector("[data-search-button]");
+    if (searchButton instanceof HTMLButtonElement) {
+        searchButton.addEventListener("click", handleOpenSearchModal);
+    }
+
     function handleDropdownClick(e: Event) {
         const target = e.target as HTMLElement;
         const details = target.closest("details");
@@ -447,6 +459,25 @@
             brand.classList.add("invert");
         } else {
             brand.classList.remove("invert");
+        }
+    }
+
+    function handleOpenSearchModal(e: Event) {
+        const target = e.target as HTMLElement;
+        let searchButton;
+        if (!(target instanceof HTMLButtonElement)) {
+            searchButton = target.closest("button");
+        } else {
+            searchButton = target;
+        }
+
+        let searchModal;
+        if (searchButton instanceof HTMLButtonElement) {
+            searchModal = searchButton.nextElementSibling;
+        }
+
+        if (searchModal instanceof HTMLDialogElement) {
+            searchModal.showModal();
         }
     }
 </script>
