@@ -16,7 +16,7 @@
                 ></path>
             </svg>
         </a>
-        <p>© 2023 CC-BY-SA Koha Library Software Community</p>
+        <p id="copyright">© 2024 CC-BY-SA Koha Library Software Community</p>
     </div>
     <div>
         <span class="footer-title">Socials</span>
@@ -70,3 +70,14 @@
         >
     </div>
 </footer>
+
+<script>
+    const copyrightParagraph = document.getElementById("copyright");
+    const currentYear = new Date().getFullYear().toString();
+
+    if (!copyrightParagraph?.innerText.includes(currentYear)) {
+        const newCopyrightParagraph = document.createElement('p');
+        newCopyrightParagraph.innerText = `© ${currentYear} CC-BY-SA Koha Library Software Community`;
+        copyrightParagraph?.replaceWith(newCopyrightParagraph);
+    }
+</script>
