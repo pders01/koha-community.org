@@ -34,6 +34,7 @@ const { searchList = JSON.stringify(pages) } = Astro.props;
             placeholder="Search..."
             data-search-input
             data-search-list={searchList}
+            autofocus
         />
         <ul data-search-output class="py-4"></ul>
     </div>
