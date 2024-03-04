@@ -413,7 +413,11 @@ import Search from "./Search.astro";
 </div>
 
 <script>
-    const theme = localStorage.getItem("theme");
+    let theme = localStorage.getItem("theme");
+    if (!theme) {
+        theme = "light";
+    }
+
     const themeToggle = document.getElementById("theme-toggle");
     if (themeToggle instanceof HTMLInputElement) {
         themeToggle.checked = theme === "dark";
