@@ -132,4 +132,7 @@ dist
 # pnpm
 pnpm-lock.yaml
 
+# bun
+bun.lockb
+
 .astro
