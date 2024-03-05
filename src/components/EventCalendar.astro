@@ -1,0 +1,101 @@
+---
+
+---
+
+<div id="calendar-wrapper">
+    <lms-calendar id="calendar" class="skeleton h-screen"></lms-calendar>
+</div>
+
+<script>
+    import "@lmscloud/lms-calendar/build/lms-calendar.bundled";
+    import { hcl } from "d3-color";
+
+    const clientHeight = document.body.clientHeight;
+    const navbar = document.querySelector(".navbar");
+    if (navbar instanceof HTMLDivElement) {
+        const navbarHeight = navbar.offsetHeight;
+        const calendarHeight = clientHeight * 0.8 - navbarHeight;
+
+        const calendarWrapper = document.getElementById("calendar-wrapper");
+        if (calendarWrapper instanceof HTMLElement) {
+            calendarWrapper.style.height = `${calendarHeight}px`;
+
+            const computedStyles = getComputedStyle(calendarWrapper);
+            const calendar = document.getElementById("calendar");
+
+            if (calendar instanceof HTMLElement) {
+                setCalendarTheme(computedStyles, calendar);
+            }
+        }
+    }
+
+    const dataThemeObserver = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+            console.log(mutation);
+            if (mutation.type === "attributes") {
+                const target = mutation.target;
+                if (!(target instanceof HTMLElement)) {
+                    return;
+                }
+
+                const { theme } = target.dataset;
+                if (theme === "light" || theme === "dark") {
+                    const calendarWrapper =
+                        document.getElementById("calendar-wrapper");
+                    if (!(calendarWrapper instanceof HTMLElement)) {
+                        return;
+                    }
+                    
+                    const computedStyles = getComputedStyle(calendarWrapper);
+                    const calendar = document.getElementById("calendar");
+                    if (!(calendar instanceof HTMLElement)) {
+                        return;
+                    }
+                    setCalendarTheme(computedStyles, calendar);
+                }
+            }
+        });
+    });
+
+    dataThemeObserver.observe(document.documentElement, {
+        attributes: true,
+    });
+
+    function setCalendarTheme(
+        computedStyles: CSSStyleDeclaration,
+        calendar: HTMLElement,
+    ) {
+        calendar.style.setProperty(
+            "--background-color",
+            oklchToHex(getPropertyValueOfSelector(computedStyles, "--b1")),
+        );
+        calendar.style.setProperty(
+            "--primary-color",
+            oklchToHex(getPropertyValueOfSelector(computedStyles, "--p")),
+        );
+        calendar.style.setProperty(
+            "--separator-light",
+            oklchToHex(getPropertyValueOfSelector(computedStyles, "--b3")),
+        );
+        calendar.style.setProperty(
+            "--separator-dark",
+            oklchToHex(getPropertyValueOfSelector(computedStyles, "--bc")),
+        );
+    }
+
+    function oklchToHex(oklchString: string) {
+        const [L, C, H] = oklchString.split(" ").map(parseFloat);
+        const color = hcl(H, C * 100, L * 100);
+
+        return color.formatHex();
+    }
+
+    function getPropertyValueOfSelector(
+        computedStyles: CSSStyleDeclaration,
+        selector: string,
+    ) {
+        return computedStyles.getPropertyValue(selector);
+    }
+</script>
+
+<style scoped></style>
