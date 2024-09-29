@@ -1,2 +1,6 @@
 # koha-community.org
-A revamp of the koha community website w/ Astro
+A revamp of the koha community website w/ Astro.
+
+## This is now an archive :)
+The friendly folks @PTFS-Europe took over this project.
+For updates check [koha-community.org](https://koha-community.org).
